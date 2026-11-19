@@ -1,0 +1,405 @@
+
+/* ===== GLOBAL STYLING ===== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #0b0b16;
+    color: white;
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
+section {
+    padding: 80px 10%;
+}
+
+h1 span,
+h2 span {
+    color: #c084fc;
+}
+
+/* ===== NAVIGATION BAR ===== */
+
+header {
+    background: #101020;
+    padding: 20px 8%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 28px;
+    color: white;
+}
+
+.logo span {
+    color: #c084fc;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #c084fc;
+}
+
+/* ===== HOME SECTION ===== */
+
+.home {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.home-content {
+    max-width: 600px;
+}
+
+.home-content h1 {
+    font-size: 48px;
+    margin: 20px 0;
+}
+
+.home-content h2 {
+    font-size: 27px;
+    margin-bottom: 20px;
+}
+
+.home-content p {
+    color: #bbb;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.home-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-circle {
+    width: 270px;
+    height: 270px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #a855f7, #312e81);
+    border: 5px solid #c084fc;
+    box-shadow: 0 0 40px #9333ea;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 75px;
+    font-weight: bold;
+}
+
+/* ===== BUTTON ===== */
+
+.btn {
+    display: inline-block;
+    padding: 13px 25px;
+    background: #a855f7;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #7e22ce;
+    transform: translateY(-3px);
+}
+
+/* ===== BIODATA SECTION ===== */
+
+.about {
+    background: #101020;
+    text-align: center;
+}
+
+.about h1,
+.education h1 {
+    font-size: 40px;
+    margin-bottom: 35px;
+}
+
+.biodata-card {
+    max-width: 700px;
+    margin: auto;
+    padding: 35px;
+    background: #19192d;
+    border: 1px solid #9333ea;
+    border-radius: 18px;
+    text-align: left;
+    box-shadow: 0 0 25px #9333ea33;
+}
+
+.biodata-card h2 {
+    color: #c084fc;
+    margin-bottom: 10px;
+}
+
+.biodata-card h3 {
+    color: #c084fc;
+    margin: 25px 0 15px;
+}
+
+.biodata-card p {
+    color: #ddd;
+    margin: 15px 0;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+}
+
+.biodata-card strong {
+    color: #c084fc;
+}
+
+/* ===== EDUCATION SECTION ===== */
+
+.education {
+    text-align: center;
+}
+
+.education-card {
+    max-width: 750px;
+    margin: auto;
+    padding: 35px;
+    background: #19192d;
+    border: 1px solid #9333ea;
+    border-radius: 18px;
+    text-align: left;
+}
+
+.education-card h2 {
+    color: #c084fc;
+    margin: 20px 0 12px;
+}
+
+.education-card h3 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.education-card p {
+    color: #bbb;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.education-card hr {
+    border: 1px solid #444;
+    margin: 25px 0;
+}
+
+/* ===== CONTACT SECTION ===== */
+
+#contact {
+    background: #101020;
+    text-align: center;
+}
+
+#contact h1 {
+    font-size: 40px;
+    margin-bottom: 25px;
+}
+
+#contact p {
+    color: #ccc;
+    margin: 15px;
+}
+
+/* ===== FOOTER ===== */
+
+footer {
+    background: #080810;
+    text-align: center;
+    padding: 20px;
+    color: #aaa;
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .home {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .home-content h1 {
+        font-size: 34px;
+    }
+
+    .profile-circle {
+        width: 200px;
+        height: 200px;
+        font-size: 55px;
+    }
+
+    section {
+        padding: 60px 5%;
+    }
+
+    .biodata-card,
+    .education-card {
+        padding: 22px;
+    }
+}
+
+/* MOBILE MENU */
+
+.menu-btn {
+    display: none;
+    background: #a855f7;
+    color: white;
+    border: none;
+    padding: 8px 13px;
+    font-size: 22px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+
+    .navbar {
+        position: relative;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        padding: 15px;
+        background: #19192d;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
+
+/* Professional Sections */
+
+.section {
+    padding: 70px 10%;
+    text-align: center;
+}
+
+.section h2 {
+    color: #c084fc;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.skills-container,
+.project-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.skill-card,
+.project-card {
+    background: #1e1b2e;
+    border: 1px solid #9333ea;
+    border-radius: 12px;
+    padding: 25px;
+    color: white;
+    transition: 0.3s;
+}
+
+.skill-card {
+    min-width: 120px;
+    font-weight: bold;
+}
+
+.project-card {
+    width: 280px;
+    text-align: left;
+}
+
+.project-card h3 {
+    color: #c084fc;
+    margin-bottom: 12px;
+}
+
+.project-card p {
+    color: #d1d5db;
+    line-height: 1.6;
+}
+
+.project-card span {
+    display: inline-block;
+    margin-top: 12px;
+    color: #c084fc;
+}
+
+.skill-card:hover,
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 5px 20px rgba(147, 51, 234, 0.3);
+}
+
+.section-description {
+    color: #d1d5db;
+    margin-top: -15px;
+    margin-bottom: 30px;
+}
+
+.skill-card {
+    min-width: 150px;
+    flex: 1 1 150px;
+    max-width: 200px;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+.skill-card h3 {
+    color: #c084fc;
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.skill-card p {
+    color: #d1d5db;
+    font-size: 14px;
+}
