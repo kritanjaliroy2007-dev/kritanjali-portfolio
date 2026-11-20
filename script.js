@@ -35,3 +35,16 @@
         display: flex;
     }
 }
+
+// Register PWA Service Worker
+if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+        navigator.serviceWorker.register("/service-worker.js")
+            .then(() => {
+                console.log("PWA is ready!");
+            })
+            .catch((error) => {
+                console.log("PWA registration failed:", error);
+            });
+    });
+}
