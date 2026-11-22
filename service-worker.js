@@ -1,5 +1,5 @@
 
-const CACHE_NAME = "kritanjali-portfolio-v1";
+const CACHE_NAME = "kritanjali-portfolio-v2";
 
 const FILES_TO_CACHE = [
     "/",
