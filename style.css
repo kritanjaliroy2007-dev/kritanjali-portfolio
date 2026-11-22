@@ -582,3 +582,35 @@ footer {
         display: flex;
     }
 }
+
+/* MOBILE SEARCH BUTTON FIX */
+@media (max-width: 768px) {
+    .navbar {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+    }
+
+    .search-trigger {
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        align-items: center;
+        justify-content: center;
+        width: 42px;
+        height: 42px;
+        flex-shrink: 0;
+        order: 3;
+        position: relative;
+        z-index: 200;
+    }
+
+    .menu-btn {
+        order: 2;
+    }
+
+    .navbar .logo {
+        order: 1;
+    }
+}
